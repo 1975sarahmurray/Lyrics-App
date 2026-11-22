@@ -171,7 +171,7 @@ function tick(timestamp){
   const elapsed=Math.min(timestamp-lastFrame,50);lastFrame=timestamp;
   const speed=Number($("scrollSpeed").value);
   if(speed>0){
-    $("lyricsBox").scrollTop += speed*elapsed/1000*12;
+    $("lyricsBox").scrollTop += speed*elapsed/1000*35;
     if($("lyricsBox").scrollTop + $("lyricsBox").clientHeight >= $("lyricsBox").scrollHeight-2){stopScroll();return;}
   }
   scrollFrame=requestAnimationFrame(tick);
